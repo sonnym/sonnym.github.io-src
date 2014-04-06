@@ -1,0 +1,154 @@
+---
+layout: post
+title: Lazy Ruby
+date: 2014-04-05 23:15:30
+tags: ruby haskell lazy memoization fibonacci
+---
+
+## Lazy Evaluation and Recursive Lists
+
+In Haskell, it is possible to construct infinite lists via recursive
+definition. This is only possible because Haskell uses
+<a href="https://en.wikipedia.org/wiki/Lazy_evaluation" target="_blank">lazy evaluation</a>
+rather than eager evaluation. Otherwise, the entire list would need to be
+calculated and the program would never terminate.
+
+Because Haskell makes it easy to define lists and is lazy, the code for
+defining an infinite series is very simple. The following list represents
+the fibonacci sequence.
+
+{% highlight haskell %}
+fibs = 1 : 1 : zipWith (+) fibs (tail fibs)
+{% endhighlight %}
+
+The list is defined recursively; the first two values are one, and every
+subsequent value is the sum of zipping the entire list with the tail of the
+list, evaluating to the sum of the two previous number for any position beyond
+the second. Pulling numbers off the list is as easy as the following.
+
+{% highlight haskell %}
+> take 10 fibs
+[1,1,2,3,5,8,13,21,34,55]
+{% endhighlight %}
+
+I was originally exposed to this concept while reading the book
+<a href="http://cs.brown.edu/~sk/Publications/Books/ProgLangs/2007-04-26/">Programming Languages: Application and Interpretation</a>
+which provides a more thorough introduction to the topic of lazy evaluation.
+
+## Spurious Examples and Limitations in Ruby
+
+Ruby 2 introduced lazy evaluation to its `Enumarable` module, accessible via
+`#lazy`. The
+<a href="http://www.ruby-doc.org/core-2.1.1/Enumerable.html#method-i-lazy" target="_blank">method</a>
+returns a new instance of a
+<a href="http://www.ruby-doc.org/core-2.1.1/Enumerator/Lazy.html" target="_blank">lazy enumerator</a>.
+
+We can use these additions to create the same sort of infinite lists that are
+possible in Haskell. First, we start by generating a simple infinite series,
+upon which we can build further abstractions.
+
+{% highlight ruby %}
+> inf = (1..Float::INFINITY).lazy
+=> #<Enumerator::Lazy: 1..Infinity>
+{% endhighlight %}
+
+Now we have an enumerator, upon which we can build additional abstractions. In
+fact, you can represent any countable set using abstractions on this
+enumerator.
+
+Unfortunately, `Enumerator::Lazy#zip` is limited, such that it is not possible
+to pass it a block without eager evaluation being triggered. This is easy,
+albeit inelegent, to circumvent by `#map`ing subsequent to a `#zip` call. For
+instance, to get the sum of all adjacent numbers, the following never
+completes.
+
+{% highlight ruby %}
+> adjacents = inf.zip(inf.drop(1)) { |a, b| a + b }
+{% endhighlight %}
+
+But by simply interposing a `#map`, it becomes possible.
+
+{% highlight ruby %}
+> adjacents = inf.zip(inf.drop(1)).map { |a, b| a + b }
+=> #<Enumerator::Lazy: #<Enumerator::Lazy: #<Enumerator::Lazy: 1..Infinity>:zip(#<Enumerator::Lazy: #<Enumerator::Lazy: 1..Infinity>:drop(1)>)>:map>
+
+> adjacents.take(10).force
+=> [3, 5, 7, 9, 11, 13, 15, 17, 19, 21]
+{% endhighlight %}
+
+Note that it is necessary to forece the evaluation, otherwise Ruby continues to
+return lazy enumerators to allow chaining.
+
+## Fibonacci in Lazy Ruby
+
+We now have all the pieces we need to replicate the Haskell example. Ruby
+allows us to define a new infinite enumerator based on the original one, but
+lacks expressiveness for a few of the features Haskell as. As such, we need to
+map the infinite series onto another one using a block, which is analogous to
+defining a new infinite series, but does not read as cleanly.
+
+Regardless of how well it reads, functionally, the following example
+accomplishes the same as the Haskell version.
+
+{% highlight ruby %}
+> fibs = inf.map do |n|
+    if n < 3
+      1
+    else
+      fibs.zip(fibs.drop(1)).map { |a, b| a + b }.first(n - 2).last
+    end
+  end
+=> #<Enumerator::Lazy: #<Enumerator::Lazy: 1..Infinity>:map>
+
+> fibs.take(10).force
+=> [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+{% endhighlight %}
+
+### Fast & Lazy Fibonacci
+
+This implementation is, unsurprisingly, painfully slow since it needs to
+reevaluate every single preceeding term in order to calculate a given term.
+This is a canonical issue with the naive recursive definition of fibonacci
+number calculations.
+
+My original
+<a href="http://matt.might.net/articles/implementation-of-recursive-fixed-point-y-combinator-in-javascript-for-memoization/" target="_blank">exposure</a>
+to the following approach manipulates the fibonacci function by using a fixed
+point and a general memoization strategy based on the y combinator. For this
+particular example, a simple caching strategy will do, but it is worth knowing
+about the more general solution.
+
+{% highlight ruby %}
+> fibs = -> {
+    cache = []
+
+    inf.map do |n|
+      if cache[n]
+        cache[n]
+      elsif n < 3
+        1
+      else
+        cache[n] = fibs.zip(fibs.drop(1)).
+                        map { |a, b| a + b }.
+                        first(n - 2).
+                        last
+      end
+    end
+  }.call
+{% endhighlight %}
+
+This allows us to calculate much higher values of the fibonacci sequence in a
+reasonable amount of time. Retrieving the 200th number happens instantly.
+
+{% highlight ruby %}
+> fibs.take(200).force.last
+=> 280571172992510140037611932413038677189525
+{% endhighlight %}
+
+Of course, this is not particularly idiomatic Ruby, since it uses a closure to
+bind the cache variable. It would be possible to rewrite this as a class (and
+I had, admittedly, originally done so), but the resulting code is over twice as
+long and amounts to a great deal of boilerplate and little else.
+
+The way I see it, as long as we are abusing Ruby for its lazy evaluation, we
+may as well abuse it functionally as well.
