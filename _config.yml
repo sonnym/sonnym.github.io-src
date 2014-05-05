@@ -8,5 +8,10 @@ url: http://sonnym.github.io/
 
 paginate: 5
 
-safe: true
 lsi: false
+
+gems: [jekyll_example_embed, jekyll_elm]
+
+collections:
+  examples:
+    output: true
