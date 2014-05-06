@@ -42,4 +42,5 @@ groupInto groups initial =
     n = div len groups
   in
     if | len == 0 -> []
-       | otherwise -> (take n initial) :: (groupInto (groups - 1) (drop n initial))
+       | otherwise -> (take n initial) :: 
+                        (groupInto (groups - 1) (drop n initial))
