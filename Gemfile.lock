@@ -39,7 +39,7 @@ GEM
       coffee-script (~> 2.2)
     jekyll-sass-converter (1.0.0.rc4)
       sass (~> 3.2)
-    jekyll_elm (0.0.4)
+    jekyll_elm (0.0.5)
     jekyll_example_embed (0.0.1)
     liquid (2.5.5)
     listen (2.7.4)
