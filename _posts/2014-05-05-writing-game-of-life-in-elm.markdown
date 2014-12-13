@@ -62,7 +62,7 @@ solid base and build on top of it. This first example will simply a grid of a
 predetermined size. It has support for cells being turned on and off, but they
 are all on to begin with.
 
-{% example_embed haskell/static_grid.elm %}
+{% example_embed elm/static_grid.elm %}
 
 The crux of this program is that we want to turn a nested list of boolean
 values (`[[Bool]]`) into an `Element`, one of two possible types for the `main`
@@ -103,7 +103,7 @@ very few steps. These are as follows:
 3. Change `generateGrid` from `[[Bool]]` to `[Float] -> [[Bool]]`
 4. `lift` our `seed` function through our existing `renderGrid` function.
 
-{% example_embed haskell/random_grid.elm %}
+{% example_embed elm/random_grid.elm %}
 
 We do write two other helper functions, `generateRow` and `groupInto`, but
 neither change is essential for the example. In fact, the rendering we wrote
@@ -130,7 +130,7 @@ consisting primarily of the following steps:
 2. Create a `step` function of type `[[Bool]] -> [[Bool]] -> [[Bool]]`.
 3. Create an `evolve` function of type `[[Bool]] -> [[Bool]]`.
 
-{% example_embed haskell/game_of_life.elm %}
+{% example_embed elm/game_of_life.elm %}
 
 The only real nuance here is that we must `sampleOn seed (every second)`, which
 updates the signal with the constant initial value. We use an empty default to
