@@ -1,22 +1,27 @@
+import List
+
+import Color (rgb)
+import Graphics.Element (Element, flow, right, down, container, topLeft, spacer, color)
+
 cellSize = 5
 (columns, rows) = (35, 35)
 
 main : Element
 main = renderGrid generateGrid
 
-generateGrid : [[Bool]]
-generateGrid = repeat rows (repeat columns True)
+generateGrid : List (List Bool)
+generateGrid = List.repeat rows (List.repeat columns True)
 
-renderGrid : [[Bool]] -> Element
+renderGrid : List (List Bool) -> Element
 renderGrid grid =
   grid
-    |> map renderRow
-    |> map (flow right)
+    |> List.map renderRow
+    |> List.map (flow right)
     |> flow down
     |> container (cellSize * columns) (cellSize * rows) topLeft
 
-renderRow : [Bool] -> [Element]
-renderRow row = map renderCell row
+renderRow : List Bool -> List Element
+renderRow row = List.map renderCell row
 
 renderCell : Bool -> Element
 renderCell on =

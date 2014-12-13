@@ -1,46 +1,57 @@
+import Signal ((<~), Signal)
+import Signal
+
+import List ((::))
+import List
+
+import Time
 import Random
+
+import Color (rgb)
+import Graphics.Element (Element, flow, right, down, container, topLeft, spacer, color)
 
 cellSize = 5
 (columns, rows) = (35, 35)
 
 main : Signal Element
-main = lift renderGrid seed
+main = renderGrid <~ (seededGrid <~ initialSeed)
 
-seed : Signal [[Bool]]
-seed =
-  columns * rows
-    |> constant
-    |> Random.floatList
-    |> lift generateGrid
+initialSeed : Signal Random.Seed
+initialSeed = (\(time, _) -> Random.initialSeed (round time)) <~ Time.timestamp (Signal.constant ())
 
-generateGrid : [Float] -> [[Bool]]
-generateGrid seeds = map generateRow (groupInto rows seeds)
+seededGrid : Random.Seed -> List (List Bool)
+seededGrid seed =
+  let (lst, _) = Random.generate (Random.list (columns * rows) (Random.int 0 1)) seed
+  in generateGrid lst
 
-generateRow : [Float] -> [Bool]
-generateRow seeds = map (\n -> n > 0.5) seeds
+generateGrid : List Int -> List (List Bool)
+generateGrid seeds = List.map generateRow (groupInto rows seeds)
 
-renderGrid : [[Bool]] -> Element
+generateRow : List Int -> List Bool
+generateRow seeds = List.map (\n -> n == 1) seeds
+
+renderGrid : List (List Bool) -> Element
 renderGrid grid =
   grid
-    |> map renderRow
-    |> map (flow right)
+    |> List.map renderRow
+    |> List.map (flow right)
     |> flow down
     |> container (cellSize * columns) (cellSize * rows) topLeft
 
-renderRow : [Bool] -> [Element]
-renderRow row = map renderCell row
+renderRow : List Bool -> List Element
+renderRow row = List.map renderCell row
 
 renderCell : Bool -> Element
 renderCell on =
   spacer cellSize cellSize
     |> color (if on then (rgb 0 0 0) else (rgb 255 255 255))
 
-groupInto : Int -> [a] -> [[a]]
+groupInto : Int -> List a -> List (List a)
 groupInto groups initial =
   let
-    len = length initial
-    n = div len groups
+    len = List.length initial
+    n = len // groups
   in
-    if | len == 0 -> []
-       | otherwise -> (take n initial) :: 
-                        (groupInto (groups - 1) (drop n initial))
+    List.repeat groups []
+      |> List.indexedMap (\i _ ->
+          List.take n (List.drop (n * i) initial))
