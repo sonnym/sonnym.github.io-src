@@ -65,9 +65,9 @@ are all on to begin with.
 {% example_embed elm/static_grid.elm %}
 
 The crux of this program is that we want to turn a nested list of boolean
-values (`[[Bool]]`) into an `Element`, one of two possible types for the `main`
-function in an Elm program. We use the `Element` API to achieve thise in a few
-steps.
+values (`List (List Bool)`) into an `Element`, one of two possible types for
+the `main` function in an Elm program. We use the `Element` API to achieve this
+in a few steps.
 
 This first example is, beyond those points, only really interesting
 syntactically. It should feel somewhat familiar to anyone who has worked with
@@ -84,11 +84,11 @@ functions, all of which are a `Signal`. This means that, we can no longer be
 concerned with simply taking one value and mutating it into another, but
 instead, with taking a signal and converting it into another signal. The `main`
 function can also be of the type `Signal Element`, which, in a sense, becomes
-the goal of our program - we have an input of type `Signal [Float]` we will be
-taking from `Random.floatList`, and we want to convert it into a
+the goal of our program - we have an input of type `Signal (List Int)` we
+will be taking from `Random.list`, and we want to convert it into a
 `Signal Element` that Elm can consume.
 
-Herein lies a core concept - that of `lift`ing a signal. The `lift` function
+Herein lies a core concept - that of `map`ing a signal. The `map` function
 has the type `(a -> b) -> Signal a -> Signal b`; it takes a function from type
 `a` to type `b` and a signal of type `a` and returns a signal of type `b`. This
 function is the primay means by which signals are converted from one type to
@@ -99,9 +99,10 @@ signal, rewriting our static example to one that is randomly generated involves
 very few steps. These are as follows:
 
 1. Change the type of `main` from `Element` to `Signal Element`.
-2. Write a `seed` function of type `Siganl [[Bool]]`
-3. Change `generateGrid` from `[[Bool]]` to `[Float] -> [[Bool]]`
-4. `lift` our `seed` function through our existing `renderGrid` function.
+2. Write an `initialSeed` function of type `Siganl Random.Seed`
+3. Write a `seededGrid` function of type `Random.Seed -> List (List Bool)`
+4. Change `generateGrid` from `List (List Bool)` to `List Int -> List (List Bool)`
+5. `map` our `seededGrid` function through our existing `renderGrid` function.
 
 {% example_embed elm/random_grid.elm %}
 
@@ -122,13 +123,13 @@ a default value for the output signal, and an input signal. The function takes
 two arguments: the current value of the input signal, and the past value (or
 the default on the first event).
 
-We can use this construct to take our `seed` of `Signal [[Bool]]` and step it
-from generation to generation. This is, again, a comparatively simple process,
-consisting primarily of the following steps:
+We can use this construct to take our `initialSeed` of `Signal (List (List Bool))`
+and step it from generation to generation. This is, again, a comparatively simple
+process, consisting primarily of the following steps:
 
 1. Update the main function to make use of `foldp`.
-2. Create a `step` function of type `[[Bool]] -> [[Bool]] -> [[Bool]]`.
-3. Create an `evolve` function of type `[[Bool]] -> [[Bool]]`.
+2. Create a `step` function of type `List (List Bool) -> List (List Bool) -> List (List Bool)`.
+3. Create an `evolve` function of type `List (List Bool) -> List (List Bool)`.
 
 {% example_embed elm/game_of_life.elm %}
 
@@ -137,7 +138,7 @@ updates the signal with the constant initial value. We use an empty default to
 determine whether we should return the value from the seed, or whether we should
 evlove the past value.
 
-We use the `Array` component for the `evolve` function, because we will need to
+We use an `indexedMap` for the `evolve` function, because we will need to
 have the index of the cell available when calling the `descend` function. Aside
 from these points, it is simply gathering all the neighboring cells, filtering
 invalid ones, counting live neighbors, and mapping to a new boolean value.
