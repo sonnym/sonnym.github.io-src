@@ -11,7 +11,7 @@ import Color (rgb)
 import Graphics.Element (Element, flow, right, down, container, topLeft, spacer, color)
 
 cellSize = 5
-(columns, rows) = (50, 50)
+(columns, rows) = (35, 35)
 
 main : Signal Element
 main =
