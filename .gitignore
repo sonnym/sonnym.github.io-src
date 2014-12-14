@@ -1,5 +1,9 @@
 .bundle
 
 _drafts
-_elm
+
+_elm/
+elm-stuff/
+elm-package.json
+
 _site
