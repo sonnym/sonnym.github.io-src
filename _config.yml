@@ -15,3 +15,5 @@ gems: [jekyll_example_embed, jekyll_elm]
 collections:
   examples:
     output: true
+  projects:
+    output: false

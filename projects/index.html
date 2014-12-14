@@ -1,0 +1,14 @@
+---
+layout: page
+title: projects
+---
+
+{% for project in site.projects %}
+  <div>
+    <h3>{{ project.name }}</h3>
+
+    <a href="{{ project.link }}" target="_blank">{{ project.link }}</a>
+
+    <div>{{ project.description }}</div>
+  </div>
+{% endfor %}
