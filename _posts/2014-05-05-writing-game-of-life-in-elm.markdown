@@ -164,3 +164,5 @@ count, duration of a generation, to flip individuals cells, to pause the game.
 The list could probaby go on and on, and combining signals from many different
 inputs is one of the strengths of Elm. I intend on revisiting this example and
 improving upon it in the near future, so wach out for that update.
+
+(This post was updated for Elm 0.14 on 13 Dec 2014)
