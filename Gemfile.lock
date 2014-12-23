@@ -38,7 +38,7 @@ GEM
       sass (~> 3.2)
     jekyll-watch (1.2.0)
       listen (~> 2.7)
-    jekyll_elm (0.14.1)
+    jekyll_elm (0.14.2)
     jekyll_example_embed (0.0.3)
     kramdown (1.5.0)
     liquid (2.6.1)
