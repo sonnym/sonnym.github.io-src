@@ -8,7 +8,7 @@ tags: angularjs
 ## The Situation
 
 Sometimes when working with nested scopes, you may encounter a situation in
-which some scope action depends on the status of some arbitarily nested
+which some scope action depends on the status of some arbitrarily nested
 controller. This could be a multi-part form built from reusable components,
 preventing the user from proceeding until complete, for example.
 
@@ -31,7 +31,7 @@ liberty of using
 to simplify checking if all conditions are met.
 
 Here, the `FormCheckboxCtrl` has no validation, but does coerce its results to
-be human readible, while `FormTextInputCtrl` returns the text input and is
+be human readable, while `FormTextInputCtrl` returns the text input and is
 invalid if none is provided.
 
 What remains is, simply, to make it work.
@@ -89,8 +89,8 @@ HookExample.controller("FormCheckboxCtrl", function($scope) {
 ## A Hook Implementation
 
 By recursively traversing the `$$childHead` and `$$nextSibling` properties of
-the scope, we can give ask if any controller nested within the heirarchy wishes
-to respond to the hook, thereby influincing the life cycle of our parent
+the scope, we can give ask if any controller nested within the hierarchy wishes
+to respond to the hook, thereby influencing the life cycle of our parent
 controller.
 
 {% highlight javascript %}
@@ -151,7 +151,7 @@ exposing carefully selected points of interaction.
 Herein, we have only examined a very simple hooking mechanism, which can
 certainly be built out to have some additional interesting properties. Optional
 callbacks and the ability to handle arguments would be straight forward
-changes.  More interesting is the possiblity to return more than just a single
+changes.  More interesting is the possibility to return more than just a single
 function for accumulating results, but instead having a more robust interface.
 This could include functionality akin to that in `ActiveRecord` callbacks,
 wherein returning false prevents future hooks from running and prevents some

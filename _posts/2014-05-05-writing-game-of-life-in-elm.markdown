@@ -91,7 +91,7 @@ will be taking from `Random.list`, and we want to convert it into a
 Herein lies a core concept - that of `map`ing a signal. The `map` function
 has the type `(a -> b) -> Signal a -> Signal b`; it takes a function from type
 `a` to type `b` and a signal of type `a` and returns a signal of type `b`. This
-function is the primay means by which signals are converted from one type to
+function is the primary means by which signals are converted from one type to
 another.
 
 As a consequence of the way `lift` works, by taking a function to convert a
@@ -99,7 +99,7 @@ signal, rewriting our static example to one that is randomly generated involves
 very few steps. These are as follows:
 
 1. Change the type of `main` from `Element` to `Signal Element`.
-2. Write an `initialSeed` function of type `Siganl Random.Seed`
+2. Write an `initialSeed` function of type `Signal Random.Seed`
 3. Write a `seededGrid` function of type `Random.Seed -> List (List Bool)`
 4. Change `generateGrid` from `List (List Bool)` to `List Int -> List (List Bool)`
 5. `map` our `seededGrid` function through our existing `renderGrid` function.
@@ -136,14 +136,14 @@ process, consisting primarily of the following steps:
 The only real nuance here is that we must `sampleOn seed (every second)`, which
 updates the signal with the constant initial value. We use an empty default to
 determine whether we should return the value from the seed, or whether we should
-evlove the past value.
+evolve the past value.
 
 We use an `indexedMap` for the `evolve` function, because we will need to
 have the index of the cell available when calling the `descend` function. Aside
 from these points, it is simply gathering all the neighboring cells, filtering
 invalid ones, counting live neighbors, and mapping to a new boolean value.
 
-## Conclusion and Futher Steps
+## Conclusion and Further Steps
 
 Elm is a wonderful and extremely expressive language, and my experiences with it
 have been overwhelmingly positive. I think it is excellent for these types of
@@ -161,8 +161,8 @@ were that the goal of the exercise.
 As such, the most interesting way to proceed with this start would be to add
 interactive elements. Allowing a user to control things like cell size and
 count, duration of a generation, to flip individuals cells, to pause the game.
-The list could probaby go on and on, and combining signals from many different
+The list could probably go on and on, and combining signals from many different
 inputs is one of the strengths of Elm. I intend on revisiting this example and
-improving upon it in the near future, so wach out for that update.
+improving upon it in the near future, so watch out for that update.
 
 (This post was updated for Elm 0.14 on 13 Dec 2014)

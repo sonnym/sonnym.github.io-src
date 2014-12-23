@@ -58,7 +58,7 @@ enumerator.
 
 Unfortunately, `Enumerator::Lazy#zip` is limited, such that it is not possible
 to pass it a block without eager evaluation being triggered. This is easy,
-albeit inelegent, to circumvent by `#map`ing subsequent to a `#zip` call. For
+albeit inelegant, to circumvent by `#map`ing subsequent to a `#zip` call. For
 instance, to get the sum of all adjacent numbers, the following never
 completes.
 
@@ -76,7 +76,7 @@ But by simply interposing a `#map`, it becomes possible.
 => [3, 5, 7, 9, 11, 13, 15, 17, 19, 21]
 {% endhighlight %}
 
-Note that it is necessary to forece the evaluation, otherwise Ruby continues to
+Note that it is necessary to force the evaluation, otherwise Ruby continues to
 return lazy enumerators to allow chaining.
 
 ## Fibonacci in Lazy Ruby
