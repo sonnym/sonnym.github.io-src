@@ -12,6 +12,8 @@ lsi: false
 
 gems: [jekyll_example_embed, jekyll_elm]
 
+excerpt_separator: "\n\n##\n\n"
+
 collections:
   examples:
     output: true
