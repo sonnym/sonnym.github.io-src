@@ -12,7 +12,9 @@ title: home
       </a>
     </h1>
 
-    {{ post.content }}
+    {{ post.excerpt }}
+
+    <a href="{{ post.url }}">Continue reading</a>
   </div>
   {% endfor %}
 </div>
