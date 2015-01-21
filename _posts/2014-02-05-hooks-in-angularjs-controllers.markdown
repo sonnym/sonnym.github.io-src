@@ -20,6 +20,8 @@ accumulation of results. This leads to better modularity, as the parent
 controller is isolated from the implementation of nested controllers, while the
 latter are able to be used modularly in more contexts.
 
+##
+
 ## A Simple Example
 
 <a href="http://plnkr.co/edit/QKzZZq?p=preview" target="_blank">Open in Plunkr</a>
