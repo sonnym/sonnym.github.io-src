@@ -11,7 +11,7 @@ GEM
       execjs
     coffee-script-source (1.9.1)
     colorator (0.1)
-    execjs (2.3.0)
+    execjs (2.4.0)
     fast-stemmer (1.0.2)
     ffi (1.9.6)
     hitimes (1.2.2)
@@ -40,7 +40,7 @@ GEM
       listen (~> 2.7)
     jekyll_elm (0.14.2)
     jekyll_example_embed (0.0.3)
-    kramdown (1.5.0)
+    kramdown (1.6.0)
     liquid (2.6.2)
     listen (2.8.5)
       celluloid (>= 0.15.2)
@@ -58,7 +58,7 @@ GEM
       ffi (>= 0.5.0)
     redcarpet (3.2.2)
     safe_yaml (1.0.4)
-    sass (3.4.12)
+    sass (3.4.13)
     timers (4.0.1)
       hitimes
     toml (0.1.2)
