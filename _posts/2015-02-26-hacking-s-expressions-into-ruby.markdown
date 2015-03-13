@@ -2,7 +2,12 @@
 layout: post
 title: Hacking S-expressions into Ruby
 date: 2015-02-26
-tags: ruby s-expressions array-literals lisp hack
+tags:
+  - ruby
+  - s-expressions
+  - array literals
+  - lisp
+  - hack
 ---
 
 ## Background

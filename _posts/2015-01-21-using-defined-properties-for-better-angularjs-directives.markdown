@@ -2,7 +2,11 @@
 layout: post
 title: Using Defined Properties for Better AngularJS Directives
 date: 2015-01-21
-tags: javascript angularjs architecture dry
+tags:
+  - javascript
+  - angularjs
+  - architecture
+  - dry
 ---
 
 ## On Directives

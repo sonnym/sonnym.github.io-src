@@ -2,7 +2,9 @@
 layout: post
 title: Barebones Architecture in Elm
 date: 2014-12-23
-tags: elm architecture
+tags:
+  - elm
+  - architecture
 ---
 
 ## Motivation and Background

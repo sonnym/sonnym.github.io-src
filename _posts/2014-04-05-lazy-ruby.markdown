@@ -2,7 +2,12 @@
 layout: post
 title: Lazy Ruby
 date: 2014-04-05
-tags: ruby haskell lazy memoization fibonacci
+tags:
+  - ruby
+  - haskell
+  - lazy
+  - memoization
+  - fibonacci
 ---
 
 ## Lazy Evaluation and Recursive Lists

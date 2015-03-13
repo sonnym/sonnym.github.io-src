@@ -2,7 +2,9 @@
 layout: post
 title: Hooks in AngularJS Controllers
 date: 2014-02-05
-tags: angularjs architecture
+tags:
+  - angularjs
+  - architecture
 ---
 
 ## The Situation

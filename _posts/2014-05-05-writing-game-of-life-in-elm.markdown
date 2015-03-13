@@ -2,7 +2,9 @@
 layout: post
 title: Writing Game of Life in Elm
 date: 2014-05-05
-tags: elm game-of-life
+tags:
+  - elm
+  - game of life
 ---
 
 ## Introduction
