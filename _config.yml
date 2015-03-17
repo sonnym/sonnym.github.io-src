@@ -10,12 +10,13 @@ paginate: 5
 
 lsi: true
 
-gems: [jekyll_example_embed, jekyll_elm]
+gems: [jekyll-paginate, jekyll_example_embed, jekyll_elm]
 
 excerpt_separator: "\n\n##\n\n"
 
 collections:
   examples:
     output: true
+    render: true
   projects:
     output: false
