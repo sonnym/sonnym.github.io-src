@@ -13,27 +13,6 @@ GIT
     classifier-reborn (2.0.3)
       fast-stemmer (~> 1.0)
 
-GIT
-  remote: git://github.com/sonnym/jekyll.git
-  revision: 9e68b9ceeaba3e21ce6bc042c6930ab6a44a78a5
-  branch: option_to_force_document_rendering
-  specs:
-    jekyll (3.0.0.beta2)
-      colorator (~> 0.1)
-      jekyll-sass-converter (~> 1.0)
-      jekyll-watch (~> 1.1)
-      kramdown (~> 1.3)
-      liquid (~> 3.0)
-      mercenary (~> 0.3.3)
-      rouge (~> 1.7)
-      safe_yaml (~> 1.0)
-
-GIT
-  remote: git://github.com/sonnym/jekyll_example_embed.git
-  revision: 0803245e37d057504af94b4e8b3193248b9744fe
-  specs:
-    jekyll_example_embed (0.0.3)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -44,12 +23,23 @@ GEM
     fast-stemmer (1.0.2)
     ffi (1.9.8)
     hitimes (1.2.2)
+    jekyll (3.0.0.beta2)
+      colorator (~> 0.1)
+      jekyll-sass-converter (~> 1.0)
+      jekyll-watch (~> 1.1)
+      kramdown (~> 1.3)
+      liquid (~> 3.0)
+      mercenary (~> 0.3.3)
+      rouge (~> 1.7)
+      safe_yaml (~> 1.0)
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.3.0)
       sass (~> 3.2)
     jekyll-watch (1.2.1)
       listen (~> 2.7)
     jekyll_elm (0.14.2)
+    jekyll_example_embed (0.0.5)
+      jekyll (>= 2.3)
     kramdown (1.6.0)
     liquid (3.0.1)
     listen (2.9.0)
@@ -85,10 +75,10 @@ PLATFORMS
 DEPENDENCIES
   classifier-reborn!
   gsl!
-  jekyll!
+  jekyll (= 3.0.0.beta2)
   jekyll-paginate
   jekyll_elm
-  jekyll_example_embed!
+  jekyll_example_embed
   pry
   pygments.rb
   redcarpet

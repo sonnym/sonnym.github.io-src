@@ -17,6 +17,5 @@ excerpt_separator: "\n\n##\n\n"
 collections:
   examples:
     output: true
-    render: true
   projects:
     output: false
