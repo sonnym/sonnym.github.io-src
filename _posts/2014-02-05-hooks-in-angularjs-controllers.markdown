@@ -54,7 +54,7 @@ What remains is, simply, to make it work.
       <input type="text" ng-model="textInput" />
     </span>
 
-    <div ng-show="showResults()">{{$scope.results()}}</div>
+    <div ng-show="showResults()">{{ $scope.results() }}</div>
   </div>
 </body>
 {% endraw %}
