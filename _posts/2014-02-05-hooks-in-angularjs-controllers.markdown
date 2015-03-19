@@ -41,6 +41,7 @@ invalid if none is provided.
 What remains is, simply, to make it work.
 
 {% highlight html %}
+{% raw %}
 <body ng-app="HookExample">
   <div ng-controller="FormPageCtrl">
     <p>Please enter some text below.</p>
@@ -56,6 +57,7 @@ What remains is, simply, to make it work.
     <div ng-show="showResults()">{{$scope.results()}}</div>
   </div>
 </body>
+{% endraw %}
 {% endhighlight %}
 
 {% highlight javascript %}
