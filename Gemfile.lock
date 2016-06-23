@@ -5,19 +5,13 @@ GIT
     gsl (1.16.0)
       narray (>= 0.5.9)
 
-GIT
-  remote: git://github.com/slashfoo/classifier-reborn.git
-  revision: a14bab4a7b16c84890ab904fb8f8baff1310b2fb
-  branch: fixlsi
-  specs:
-    classifier-reborn (2.0.3)
-      fast-stemmer (~> 1.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
     celluloid (0.16.0)
       timers (~> 4.0.0)
+    classifier-reborn (2.0.4)
+      fast-stemmer (~> 1.0)
     coderay (1.1.0)
     colorator (0.1)
     fast-stemmer (1.0.2)
@@ -73,7 +67,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  classifier-reborn!
+  classifier-reborn
   gsl!
   jekyll (= 3.0.0.pre.beta2)
   jekyll-paginate
@@ -82,3 +76,6 @@ DEPENDENCIES
   pry
   pygments.rb
   redcarpet
+
+BUNDLED WITH
+   1.12.4

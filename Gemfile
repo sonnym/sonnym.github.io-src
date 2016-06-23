@@ -6,7 +6,7 @@ gem 'jekyll-paginate'
 gem 'jekyll_elm'
 gem 'jekyll_example_embed'
 
-gem 'classifier-reborn', github: 'slashfoo/classifier-reborn', branch: 'fixlsi'
+gem 'classifier-reborn'
 gem 'redcarpet'
 gem 'pygments.rb'
 
