@@ -1,3 +1,3 @@
 require 'pygments'
 
-Pygments.start('/home/sonny/usr/bin/pygmentize')
+Pygments.start('PYTHONPATH=$HOME/usr/lib/python3.5/site-packages/ $HOME/usr/bin/pygmentize')
