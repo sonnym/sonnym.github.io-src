@@ -8,7 +8,8 @@ url: http://sonnym.github.io/
 
 paginate: 5
 
-exclude: [_posts/2014-05-05-writing-game-of-life-in-elm.markdown, _posts/2014-12-23-barebones-architecture-in-elm.markdown]
+exclude: [_examples/elm/0.14/*]
+keep_files: [examples/elm/0.14/*]
 
 lsi: true
 
