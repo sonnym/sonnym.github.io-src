@@ -10,6 +10,4 @@ gem 'classifier-reborn'
 gem 'redcarpet'
 gem 'pygments.rb'
 
-gem 'gsl', github: 'siefca/rb-gsl'
-
 gem 'pry'

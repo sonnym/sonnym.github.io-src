@@ -1,18 +1,11 @@
-GIT
-  remote: git://github.com/siefca/rb-gsl.git
-  revision: d9b78c9cf18e112f6ab0623480a9861969b6fa9f
-  specs:
-    gsl (1.16.0)
-      narray (>= 0.5.9)
-
 GEM
   remote: https://rubygems.org/
   specs:
     addressable (2.5.1)
       public_suffix (~> 2.0, >= 2.0.2)
-    classifier-reborn (2.0.4)
+    classifier-reborn (2.1.0)
       fast-stemmer (~> 1.0)
-    coderay (1.1.0)
+    coderay (1.1.1)
     colorator (1.1.0)
     fast-stemmer (1.0.2)
     ffi (1.9.18)
@@ -34,8 +27,8 @@ GEM
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
     jekyll_elm (0.14.2)
-    jekyll_example_embed (0.0.6)
-      jekyll (>= 2.3)
+    jekyll_example_embed (0.0.8)
+      jekyll (~> 3)
     kramdown (1.13.2)
     liquid (3.0.6)
     listen (3.0.8)
@@ -43,34 +36,30 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.7)
     mercenary (0.3.6)
     method_source (0.8.2)
-    narray (0.6.1.1)
+    multi_json (1.12.1)
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
-    posix-spawn (0.3.11)
-    pry (0.10.1)
+    pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
     public_suffix (2.0.5)
-    pygments.rb (0.6.3)
-      posix-spawn (~> 0.3.6)
-      yajl-ruby (~> 1.2.0)
+    pygments.rb (1.1.2)
+      multi_json (>= 1.0.0)
     rb-fsevent (0.9.8)
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
-    redcarpet (3.3.2)
+    redcarpet (3.4.0)
     rouge (1.11.1)
     safe_yaml (1.0.4)
     sass (3.4.23)
     slop (3.6.0)
-    yajl-ruby (1.2.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   classifier-reborn
-  gsl!
   jekyll
   jekyll-paginate
   jekyll_elm
