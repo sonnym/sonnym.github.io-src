@@ -66,7 +66,7 @@ solid base and build on top of it. This first example will simply a grid of a
 predetermined size. It has support for cells being turned on and off, but they
 are all on to begin with.
 
-{% example_embed elm/static_grid.elm %}
+{% example_embed elm/0.14/static_grid.elm %}
 
 The crux of this program is that we want to turn a nested list of boolean
 values (`List (List Bool)`) into an `Element`, one of two possible types for
@@ -108,7 +108,7 @@ very few steps. These are as follows:
 4. Change `generateGrid` from `List (List Bool)` to `List Int -> List (List Bool)`
 5. `map` our `seededGrid` function through our existing `renderGrid` function.
 
-{% example_embed elm/random_grid.elm %}
+{% example_embed elm/0.14/random_grid.elm %}
 
 We do write two other helper functions, `generateRow` and `groupInto`, but
 neither change is essential for the example. In fact, the rendering we wrote
@@ -135,7 +135,7 @@ process, consisting primarily of the following steps:
 2. Create a `step` function of type `List (List Bool) -> List (List Bool) -> List (List Bool)`.
 3. Create an `evolve` function of type `List (List Bool) -> List (List Bool)`.
 
-{% example_embed elm/game_of_life.elm %}
+{% example_embed elm/0.14/game_of_life.elm %}
 
 The only real nuance here is that we must `sampleOn seed (every second)`, which
 updates the signal with the constant initial value. We use an empty default to

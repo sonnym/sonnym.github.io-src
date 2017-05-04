@@ -48,7 +48,7 @@ trivial) user interface in Elm. It consists of nothing more that a button
 that increments a value, but this simple scene gives us the foundation  upon
 which we can build larger applications.
 
-{% example_embed elm/barebones_architecture.elm %}
+{% example_embed elm/0.14/barebones_architecture.elm %}
 
 ## The Moving Parts
 
