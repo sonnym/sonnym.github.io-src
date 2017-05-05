@@ -1,3 +1,9 @@
+PATH
+  remote: ../jekyll_example_embed
+  specs:
+    jekyll_example_embed (0.0.8)
+      jekyll (~> 3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -21,14 +27,18 @@ GEM
       pathutil (~> 0.9)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
+    jekyll-octicons (3.0.1)
+      jekyll (~> 3.1)
+      octicons (~> 3.0)
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
     jekyll_elm (0.14.2)
-    jekyll_example_embed (0.0.8)
+    jekyll_fancy_link (0.0.1)
       jekyll (~> 3)
+      jekyll-octicons (~> 3)
     kramdown (1.13.2)
     liquid (3.0.6)
     listen (3.0.8)
@@ -36,7 +46,12 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.7)
     mercenary (0.3.6)
     method_source (0.8.2)
+    mini_portile2 (2.1.0)
     multi_json (1.12.1)
+    nokogiri (1.7.1)
+      mini_portile2 (~> 2.1.0)
+    octicons (3.0.1)
+      nokogiri (>= 1.6.3.1)
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
     pry (0.10.4)
@@ -63,7 +78,8 @@ DEPENDENCIES
   jekyll
   jekyll-paginate
   jekyll_elm
-  jekyll_example_embed
+  jekyll_example_embed!
+  jekyll_fancy_link
   pry
   pygments.rb
   redcarpet
