@@ -17,7 +17,10 @@ messy business logic and expose a very clean, declarative interface to consumers
 of the API. As with most tools for constructing abstractions, however,
 directives have certain limitations that can lead to implementation details
 leaking through, resulting in code that less
-<a href="https://en.wikipedia.org/wiki/DRY_principle" target="_blank">DRY</a>
+{% fancylink %}
+https://en.wikipedia.org/wiki/DRY_principle
+DRY
+{% endfancylink %}
 and, consequently, less maintainable.
 
 There are, however, ways to work around these shortcomings and to build
@@ -27,7 +30,10 @@ logic. This method is also well suited for building on top of third party
 directives with a complex API by abstracting the details into a business
 object. In doing so, our markup will become more in line with the ideal in
 AngularJS, which
-<a href="https://docs.angularjs.org/guide/introduction" target="_blank">promotes declarative code</a>
+{% fancylink %}
+https://docs.angularjs.org/guide/introduction
+promotes declarative code
+{% endfancylink %}
 over imperative. Without further ado, let us look at the current situation and
 how we can improve our directives.
 
@@ -36,7 +42,10 @@ how we can improve our directives.
 ## Motivation and Shortcomings
 
 The original motivation for this method arose when working with
-<a href="https://angular-ui.github.io/bootstrap/#/tabs" target="_blank">tabs component</a>
+{% fancylink %}
+https://angular-ui.github.io/bootstrap/#/tabs
+tabs component
+{% endfancylink %}
 of AngularUI Bootstrap. Its `<tabset>` directive provides three settings with
 clearly overlapping concerns: `active`, `select()`, and `deselect()`. This
 redundancy forces users of the API to not only create functions in addition to
@@ -62,7 +71,10 @@ This boilerplate quickly accumulates, making our controllers fatter than they
 optimally should be. We could move this logic into our service layer, but that
 only deflects, not fundamentally solves, the issue.  One may surmise that,
 perhaps, instead we could supply a function, but the
-<a href="https://code.angularjs.org/1.3.10/docs/api/ng/service/$compile#-scope-" target="_blank">two-way binding</a>
+{% fancylink %}
+https://code.angularjs.org/1.3.10/docs/api/ng/service/$compile#-scope-
+two-way binding
+{% endfancylink %}
 mechanism for directives requires that the property we specify be assignable.
 As such, we cannot use our function as is to pass the value through the'
 interface of the directive.
@@ -71,7 +83,10 @@ interface of the directive.
 
 There is, however, a very simple way to circumvent both these issues with one
 fairly small change.  Introduce the
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty" target="_blank">Object.defineProperty</a>
+{% fancylink %}
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty
+Object.defineProperty
+{% endfancylink %}
 method, part of the ECMAScript-262 standard. This extremely powerful method
 gives us the ability to define custom properties on an object and control
 aspects of it otherwise not available, such as its enumerability and whether or
@@ -128,11 +143,17 @@ N.B. Using a wrapper class is a somewhat naive way of accomplishing this
 technique, but it works well enough for these purposes. For a comprehensive
 treatment on the subject of object composition and extension in JavaScript, I
 cannot recommend highly enough Reginald Braithwaite's treatise on the topic:
-<a href="https://leanpub.com/javascript-spessore/read" target="_blank">JavaScript Spessore</a>.
+{% fancylink %}
+https://leanpub.com/javascript-spessore/read
+JavaScript Spessore
+{% endfancylink %}.
 
 ## An Example
 
-<a href="http://plnkr.co/edit/7X66uV?p=preview" target="_blank">Open in Plunkr</a>
+{% fancylink %}
+http://plnkr.co/edit/7X66uV?p=preview
+Open in Plunkr
+{% endfancylink %}
 
 Using the above service, we can construct a complete example of how this
 process works. This example underscores all of the advantages discussed above.

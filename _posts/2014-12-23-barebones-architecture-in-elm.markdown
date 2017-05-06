@@ -10,7 +10,10 @@ tags:
 ## Motivation and Background
 
 In the process of writing larger applications in
-<a href="http://elm-lang.org/" target="_blank">Elm</a>,
+{% fancylink %}
+http://elm-lang.org/
+Elm
+{% endfancylink %}
 I find it far too easy to initially focus on one small part of the problem
 while losing perspective on the bigger picture. For instance, I will begin by
 rendering a simple scene, followed by splitting out components, and finally
@@ -20,16 +23,31 @@ I have already written.
 
 There are some really excellent resources covering the architecture of applications
 in the Elm language. The
-<a href="http://elm-lang.org/learn/Architecture.elm" target="_blank">canonical article</a>
+{% fancylink 20141223 %}
+http://elm-lang.org/learn/Architecture.elm
+canonical article
+{% endfancylink %}
 on the subject can be found on the official Elm site and covers everything at
 a high level. The best example is likely
-<a href="https://evancz.github.io/elm-todomvc/" target="_blank">TodoMVC</a>
-(<a href="https://github.com/evancz/elm-todomvc" target="_blank">source</a>)
+{% fancylink %}
+https://evancz.github.io/elm-todomvc/
+TodoMVC
+{% endfancylink %}
+({% fancylink %}
+https://github.com/evancz/elm-todomvc
+source
+{% endfancylink %})
 ported to Elm which uses many the concepts from the article to create a rich
 and simple interface, showcasing just how powerful Elm is.  Another great and
 extremely polished example is
-<a href="http://dreamwriter.io/" target="_blank">Dreamwriter</a>
-(<a href="https://github.com/rtfeldman/dreamwriter" target="_blank">source</a>),
+{% fancylink %}
+http://dreamwriter.io/
+Dreamwriter
+{% endfancylink %}
+({% fancylink %}
+https://github.com/rtfeldman/dreamwriter
+source
+{% endfancylink %}),
 which also incorporates the separation of components as outlined in the original
 article.
 
@@ -65,9 +83,15 @@ We will discuss each in turn.
 
 Most applications are not very interesting without user input. We choose to
 represent all user input as a
-<a href="http://elm-lang.org/learn/Union-Types.elm" target="_blank">union type</a>
+{% fancylink %}
+http://elm-lang.org/learn/Union-Types.elm
+union type
+{% endfancylink %}
 This gives us the ability to easily
-<a href="https://en.wikipedia.org/wiki/Pattern_matching" target="_blank">pattern match</a>
+{% fancylink %}
+https://en.wikipedia.org/wiki/Pattern_matching
+pattern match
+{% endfancylink %}
 on the user action in a case statement, which will be useful very soon. In this
 particular example, the `Action` type can only consist of either a `NoOp` or
 `Increment`.
@@ -75,7 +99,10 @@ particular example, the `Action` type can only consist of either a `NoOp` or
 ### Signal Channel for Message Passing
 
 We then create a
-<a href="http://elm-lang.org/blog/announce/0.14.elm#signal-channels" target="_blank">signal channel</a>
+{% fancylink %}
+http://elm-lang.org/blog/announce/0.14.elm#signal-channels
+signal channel
+{% endfancylink %}
 of actions. The `actions` method creates a new channel that will default to the
 `NoOp` value. The `incrementButton` function creates a new button that will send
 the `Increment` value to the channel.
@@ -117,7 +144,10 @@ to the `Action` union type, extend the case statement in `step`, and create
 more sources of input like `incrementButton`. In reality, however, our
 applications will be much more maintainable if we create separate components
 and nested `Action` and `State` types (which the
-<a href="http://elm-lang.org/learn/Architecture.elm#nesting" target="_blank">architecture article</a>
+{% fancylink 20141223 %}
+http://elm-lang.org/learn/Architecture.elm#nesting
+architecture article
+{% endfancylink %}
 covers in detail).
 
 In conclusion, the basic pattern that is being used in more complex and feature

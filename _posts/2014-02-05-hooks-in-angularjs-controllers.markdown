@@ -26,12 +26,18 @@ latter are able to be used modularly in more contexts.
 
 ## A Simple Example
 
-<a href="http://plnkr.co/edit/QKzZZq?p=preview" target="_blank">Open in Plunkr</a>
+{% fancylink %}
+http://plnkr.co/edit/QKzZZq?p=preview
+Open in Plunkr
+{% endfancylink %}
 
 As the structure of the following example indicates, we have three controllers
 - one that coordinates and two that handle user input. We have taken the
 liberty of using
-<a href="http://underscorejs.org/" target="_blank">underscore</a>
+{% fancylink %}
+http://underscorejs.org/
+underscore
+{% endfancylink %}
 to simplify checking if all conditions are met.
 
 Here, the `FormCheckboxCtrl` has no validation, but does coerce its results to

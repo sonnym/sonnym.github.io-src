@@ -38,15 +38,24 @@ invariant over time, and user input (e.g. `Mouse.clicks`). These, and other,
 signals can be combined and manipulated in various ways to achieve vastly
 complex results, clearly and concisely. It is this expressive power of Elm
 that I find especially interesting. The
-<a href="http://elm-lang.org/learn/What-is-FRP.elm" target="_blank">overview of FRP</a>
+{% fancylink %}
+http://elm-lang.org/learn/What-is-FRP.elm
+overview of FRP
+{% endfancylink %}
 on the Elm site is excellent resource for these core concepts.
 
 For this reason, I chose Elm to explore Conway's Game of Life. Having seen that
 Life can be written concisely, to an almost absurd degree, in
-<a href="http://youtu.be/a9xAKttWgP4" target="_blank">APL</a>, it seems to me
-to be a very interesting problem by which to compare different languages. I
-have only dabbled with Elm in the past, writing a toy for
-<a href="http://www.ludumdare.com/compo/ludum-dare-28/" target="_blank">LD 28</a>,
+{% fancylink %}
+http://youtu.be/a9xAKttWgP4
+APL
+{% endfancylink %},
+it seems to me to be a very interesting problem by which to compare different
+languages. I have only dabbled with Elm in the past, writing a toy for
+{% fancylink %}
+http://www.ludumdare.com/compo/ludum-dare-28/
+LD 28
+{% endfancylink %},
 but have always wanted to spend some more time getting to know the language.
 
 Without further ado, let us begin writing Conway's Game of Life.

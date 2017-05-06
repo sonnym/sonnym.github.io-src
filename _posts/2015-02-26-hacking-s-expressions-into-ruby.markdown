@@ -12,17 +12,26 @@ tags:
 
 ## Background
 
-<a href="https://en.wikipedia.org/wiki/S-expression" target="_blank">S-expressions</a>
+{% fancylink %}
+https://en.wikipedia.org/wiki/S-expression
+S-expressions
+{% endfancylink %}
 are a classic means of storing trees of data. Part of the original Lisp
 specification, they have been a part of software engineering since the very
 beginning. Other languages, notably Scheme and, more recently, Clojure, have
 helped maintain the relevancy of this very simple means for representing data.
 
 In the spirit of
-<a href="https://en.wikipedia.org/wiki/Greenspun%27s_tenth_rule" target="_blank">Greenspun's tenth rule</a>,
+{% fancylink %}
+https://en.wikipedia.org/wiki/Greenspun%27s_tenth_rule
+Greenspun's tenth rule
+{% endfancylink %},
 we are going to attempt make first-class s-expressions in Ruby. There is
 already a
-<a href="http://rosettacode.org/wiki/S-Expressions#Ruby" target="_blank">nice implementation</a>
+{% fancylink %}
+http://rosettacode.org/wiki/S-Expressions#Ruby
+nice implementation
+{% endfancylink %}
 of s-expressions in Ruby, for reference, but they are not first-class, which
 makes them less than ideal. As such, we are going to to see how far we can
 push (read: abuse) the dynamic nature of the Ruby language, and investigate
@@ -41,7 +50,10 @@ class. We will be able to skip most of the important details, and simply need
 to write a mechanism for calling an Array.
 
 The following is a fairly trivial
-<a href="https://en.wikipedia.org/wiki/Monkey-patch" target="_blank">duck punch</a>
+{% fancylink %}
+https://en.wikipedia.org/wiki/Monkey-patch
+duck punch
+{% endfancylink %}
 on the `Array` class that introduces a new `Array#call` method. This method
 treats the first item in the array as an operation to be performed, and the
 second as the implicit receiver of that message. If the receiver responds to
@@ -240,7 +252,10 @@ This is mostly garbage, but there are some interesting snippets amongst the
 multitude of noise. Maybe we can abuse something in `RubyToken` to allow us to
 intercept (and own) the normal array instantiation process. Unfortunately, this
 has actually all been a red herring. The `RubyToken` module is a part of
-<a href="http://ruby-doc.org/stdlib-2.2.0/libdoc/irb/rdoc/RubyToken.html" target="_blank">`irb`</a>,
+{% fancylink %}
+http://ruby-doc.org/stdlib-2.2.0/libdoc/irb/rdoc/RubyToken.html
+`irb`
+{% endfancylink %},
 which we conveniently neglected to mention are using to test the various
 examples. We get no useful output trying the same hacks from within a ruby
 script, and get different ones when we use `pry`. The one glimmer of hope was

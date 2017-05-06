@@ -14,7 +14,10 @@ tags:
 
 In Haskell, it is possible to construct infinite lists via recursive
 definition. This is only possible because Haskell uses
-<a href="https://en.wikipedia.org/wiki/Lazy_evaluation" target="_blank">lazy evaluation</a>
+{% fancylink %}
+https://en.wikipedia.org/wiki/Lazy_evaluation
+lazy evaluation
+{% endfancylink %}
 rather than eager evaluation. Otherwise, the entire list would need to be
 calculated and the program would never terminate.
 
@@ -39,16 +42,25 @@ the second. Pulling numbers off the list is as easy as the following.
 {% endhighlight %}
 
 I was originally exposed to this concept while reading the book
-<a href="http://cs.brown.edu/~sk/Publications/Books/ProgLangs/2007-04-26/">Programming Languages: Application and Interpretation</a>
+{% fancylink %}
+http://cs.brown.edu/~sk/Publications/Books/ProgLangs/2007-04-26/
+Programming Languages: Application and Interpretation
+{% endfancylink %}
 which provides a more thorough introduction to the topic of lazy evaluation.
 
 ## Spurious Examples and Limitations in Ruby
 
 Ruby 2 introduced lazy evaluation to its `Enumarable` module, accessible via
 `#lazy`. The
-<a href="http://www.ruby-doc.org/core-2.1.1/Enumerable.html#method-i-lazy" target="_blank">method</a>
+{% fancylink %}
+http://www.ruby-doc.org/core-2.1.1/Enumerable.html#method-i-lazy
+method
+{% endfancylink %}
 returns a new instance of a
-<a href="http://www.ruby-doc.org/core-2.1.1/Enumerator/Lazy.html" target="_blank">lazy enumerator</a>.
+{% fancylink %}
+http://www.ruby-doc.org/core-2.1.1/Enumerator/Lazy.html
+lazy enumerator
+{% endfancylink %} .
 
 We can use these additions to create the same sort of infinite lists that are
 possible in Haskell. First, we start by generating a simple infinite series,
@@ -119,7 +131,10 @@ This is a canonical issue with the naive recursive definition of fibonacci
 number calculations.
 
 My original
-<a href="http://matt.might.net/articles/implementation-of-recursive-fixed-point-y-combinator-in-javascript-for-memoization/" target="_blank">exposure</a>
+{% fancylink %}
+http://matt.might.net/articles/implementation-of-recursive-fixed-point-y-combinator-in-javascript-for-memoization/
+exposure
+{% endfancylink %}
 to the following approach manipulates the fibonacci function by using a fixed
 point and a general memoization strategy based on the y combinator. For this
 particular example, a simple caching strategy will do, but it is worth knowing
