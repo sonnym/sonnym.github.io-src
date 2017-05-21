@@ -8,7 +8,7 @@ url: http://sonnym.github.io/
 
 paginate: 5
 
-exclude: ["Gemfile", "Gemfile.lock", "_examples/elm/0.14/*"]
+exclude: ["Gemfile", "Gemfile.lock", "elm-package.json", "_examples/elm/0.14/*"]
 keep_files: [".git", "examples/elm/0.14/*"]
 
 lsi: true
