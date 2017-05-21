@@ -11,9 +11,16 @@ tags:
 
 In this article, we will walk through the steps for writing an implementation
 of
-<a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank">Conway's Game of Life</a>
+{% fancylink %}
+https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
+Conway's Game of Life
+{% endfancylink %}
 in the
-<a href="http://elm-lang.org/" target="_blank">Elm</a> programming language.
+{% fancylink %}
+http://elm-lang.org/
+Elm
+{% endfancylink %}
+ programming language.
 
 In doing so, we will learn about the basic principles involved with writing
 programs in Elm, while grounding them in a concrete problem. We will be
@@ -22,15 +29,21 @@ between the examples, but it will be more clear to present each step in its
 entirety.
 
 I first became interested in Elm after seeing Evan Czaplicki's
-<a href="http://lanyrd.com/2013/mlocjs/sccwrp/" target="_blank">talk</a> from
-mloc.js 2013, where he presented an overview of Elm and the compelling example
+{% fancylink %}
+http://lanyrd.com/2013/mlocjs/sccwrp/
+talk
+{% endfancylink %}
+from mloc.js 2013, where he presented an overview of Elm and the compelling example
 of how one would write a simple side-scroller in an extremely straight forward
 fashion as a consequence of the core concept in Elm: signals.
 
 ##
 
 Elm is a
-<a href="https://en.wikipedia.org/wiki/Functional_reactive_programming" target="_blank">functional reactive programming</a>
+{% fancylink %}
+https://en.wikipedia.org/wiki/Functional_reactive_programming
+functional reactive programming
+{% endfancylink %}
 language, a paradigm concerned with using an explicit model of time. Elm uses
 signals as its abstraction of time-varying values, including various time
 functions (e.g. `every second`), constants (e.g. `constant True`), which are
