@@ -16,7 +16,11 @@ keep_files: [".git", "examples/elm/0.14/*"]
 
 lsi: true
 
-gems: [jekyll-paginate-v2, jekyll_example_embed, jekyll_elm, jekyll_fancy_link]
+gems:
+  - jekyll-paginate-v2
+  - jekyll_example_embed
+  - jekyll_elm
+  - jekyll_fancy_link
 
 excerpt_separator: "\n\n##\n\n"
 
