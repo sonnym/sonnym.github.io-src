@@ -6,14 +6,17 @@ permalink: pretty
 title: effluence
 url: http://sonnym.github.io/
 
-paginate: 5
+pagination:
+  enabled: true
+  per_page: 5
+  sort_reverse: true
 
 exclude: ["Gemfile", "Gemfile.lock", "elm*", "_examples/elm/0.14/*"]
 keep_files: [".git", "examples/elm/0.14/*"]
 
 lsi: true
 
-gems: [jekyll-paginate, jekyll_example_embed, jekyll_elm, jekyll_fancy_link]
+gems: [jekyll-paginate-v2, jekyll_example_embed, jekyll_elm, jekyll_fancy_link]
 
 excerpt_separator: "\n\n##\n\n"
 
