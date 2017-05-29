@@ -33,7 +33,7 @@ GEM
     jekyll_elm (0.14.2)
     jekyll_example_embed (0.0.9)
       jekyll (~> 3)
-    jekyll_fancy_link (0.0.4)
+    jekyll_fancy_link (0.0.5)
       jekyll (~> 3)
       jekyll-octicons (~> 3)
     kramdown (1.13.2)
