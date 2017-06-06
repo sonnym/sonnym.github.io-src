@@ -99,7 +99,7 @@ foo
 {% endhighlight %}
 
 Being required to `call` each array after instantiation, however, is incredibly
-suboptimal &emdash; from a standpoint of maintainability and legibility, of
+suboptimal—from a standpoint of maintainability and legibility, of
 course.  Perhaps it will be possible for us to be able to have this method
 get called automatically under some circumstances. In order to do this, we will
 need to investigate how arrays get instantiated and see if we can hook into
