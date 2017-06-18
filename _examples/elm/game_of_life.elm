@@ -63,13 +63,13 @@ groupInto n lst =
   else
     (List.take n lst) :: (groupInto n (List.drop n lst))
 
-evolve : List (List Bool) -> List (List Bool)
+evolve : Grid -> Grid
 evolve generation =
   List.indexedMap (\y row ->
     List.indexedMap (\x _ ->
       descend generation x y) row) generation
 
-descend : List (List Bool) -> Int -> Int -> Bool
+descend : Grid -> Int -> Int -> Bool
 descend grid x y =
   List.concatMap (\n -> List.map (\m -> (x + n, y + m))
                    [-1, 0, 1]) [-1, 0, 1]
