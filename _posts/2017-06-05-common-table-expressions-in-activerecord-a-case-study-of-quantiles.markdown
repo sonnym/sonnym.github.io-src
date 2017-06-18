@@ -12,6 +12,8 @@ tags:
   - window functions
 ---
 
+# Framing
+
 Today, we are going to look at a straightforward real-world problem, and build a
 comprehensive solution.  In doing so, we will start with some various naive
 approaches as we increase our understanding of the underlying mechanics,
