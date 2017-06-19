@@ -12,7 +12,7 @@ tags:
   - window functions
 ---
 
-# Framing
+## Framing
 
 Today, we are going to look at a straightforward real-world problem, and build a
 comprehensive solution.  In doing so, we will start with some various naive
