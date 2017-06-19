@@ -26,7 +26,7 @@ init : (Grid, Cmd Msg)
 init =
   ([[]], Random.generate
     Initialize
-    (Random.map (groupInto rows) (Random.list (rows * columns) Random.bool)))
+    (Random.map (groupInto columns) (Random.list (rows * columns) Random.bool)))
 
 view : Grid -> Html msg
 view grid = div [ ] (List.map row grid)
