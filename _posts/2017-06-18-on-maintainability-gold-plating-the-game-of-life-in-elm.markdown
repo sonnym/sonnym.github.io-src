@@ -704,9 +704,9 @@ At long last, behold the full example before we discuss it in more detail:
 
 {% example_embed elm/game_of_life_gold_plated.elm %}
 
-This is, unfortunately, somewhat of a mess — not for any fault of Elm.  The
-main problem is having kept everything in a single file in an attempt to make
-the example self-contained.  Imagine separating out the `view` function (in
+This is, unfortunately, somewhat of a mess—not for any fault of Elm.  The main
+problem is having kept everything in a single file in an attempt to make the
+example self-contained.  Imagine separating out the `view` function (in
 conjunction with subordinates) and the `update` (with its helpers) into separate
 modules, leaving only the core logic in main file.  Elm, in fact, is designed in
 such a way to facilitate (and even encourage) this sort of structure.
