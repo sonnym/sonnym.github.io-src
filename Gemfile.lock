@@ -7,9 +7,12 @@ GEM
       fast-stemmer (~> 1.0)
     coderay (1.1.1)
     colorator (1.1.0)
+    cssminify2 (2.0.1)
+    execjs (2.7.0)
     fast-stemmer (1.0.2)
     ffi (1.9.18)
     forwardable-extended (2.6.0)
+    htmlcompressor (0.3.1)
     jekyll (3.5.0)
       addressable (~> 2.4)
       colorator (~> 1.0)
@@ -21,6 +24,11 @@ GEM
       pathutil (~> 0.9)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
+    jekyll-minifier (0.1.2)
+      cssminify2 (~> 2.0)
+      htmlcompressor (~> 0.3)
+      jekyll (~> 3.0)
+      uglifier (~> 2.7)
     jekyll-octicons (3.0.1)
       jekyll (~> 3.1)
       octicons (~> 3.0)
@@ -37,6 +45,7 @@ GEM
     jekyll_fancy_link (0.0.5)
       jekyll (~> 3)
       jekyll-octicons (~> 3)
+    json (2.1.0)
     kramdown (1.13.2)
     liquid (4.0.0)
     listen (3.0.8)
@@ -67,6 +76,9 @@ GEM
     safe_yaml (1.0.4)
     sass (3.4.24)
     slop (3.6.0)
+    uglifier (2.7.2)
+      execjs (>= 0.3.0)
+      json (>= 1.8.0)
 
 PLATFORMS
   ruby
@@ -74,6 +86,7 @@ PLATFORMS
 DEPENDENCIES
   classifier-reborn
   jekyll
+  jekyll-minifier
   jekyll-paginate-v2
   jekyll_elm
   jekyll_example_embed
