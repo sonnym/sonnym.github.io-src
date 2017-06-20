@@ -16,7 +16,7 @@ keep_files: [".git", "examples/elm/0.14/*"]
 
 lsi: true
 
-gems:
+plugins:
   - jekyll-paginate-v2
   - jekyll_example_embed
   - jekyll_elm
