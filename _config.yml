@@ -11,7 +11,7 @@ pagination:
   per_page: 5
   sort_reverse: true
 
-exclude: ["Gemfile", "Gemfile.lock", "elm*", "_examples/elm/0.14/*"]
+exclude: ["Gemfile", "Gemfile.lock", "elm*", "_examples/elm/0.14/*", '*.xcf']
 keep_files: [".git", "examples/elm/0.14/*"]
 
 lsi: true
