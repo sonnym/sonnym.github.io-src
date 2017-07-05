@@ -37,7 +37,7 @@ student, also display the quintile into which their grade falls.
 
 ##
 
-# Calculating Quantiles in PostgreSQL
+## Calculating Quantiles in PostgreSQL
 
 Let us begin by looking at the structure of our `students` table.  The
 following was generated with a simple Rails migration, the details of which are
