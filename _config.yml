@@ -30,3 +30,6 @@ collections:
     output: true
   projects:
     output: false
+
+jekyll-minifier:
+  exclude: 'atom.xml'
