@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'jekyll'
+gem 'jekyll', '3.6.0.pre.beta1'
 gem 'jekyll-paginate-v2'
 
 gem 'jekyll-minifier', github: 'digitalsparky/jekyll-minifier', ref: 'cab431a9524dfd7d0a80d563e86f34072eebd024'
