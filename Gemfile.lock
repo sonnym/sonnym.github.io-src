@@ -1,14 +1,3 @@
-GIT
-  remote: git://github.com/digitalsparky/jekyll-minifier.git
-  revision: cab431a9524dfd7d0a80d563e86f34072eebd024
-  ref: cab431a9524dfd7d0a80d563e86f34072eebd024
-  specs:
-    jekyll-minifier (0.1.3)
-      cssminify2 (~> 2.0)
-      htmlcompressor (~> 0.3)
-      jekyll (~> 3.5)
-      uglifier (~> 3.2)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -35,6 +24,11 @@ GEM
       pathutil (~> 0.9)
       rouge (>= 1.7, < 3)
       safe_yaml (~> 1.0)
+    jekyll-minifier (0.1.5)
+      cssminify2 (~> 2.0)
+      htmlcompressor (~> 0.3)
+      jekyll (~> 3.5)
+      uglifier (~> 3.2)
     jekyll-octicons (3.0.1)
       jekyll (~> 3.1)
       octicons (~> 3.0)
@@ -94,7 +88,7 @@ PLATFORMS
 DEPENDENCIES
   classifier-reborn
   jekyll (= 3.6.0.pre.beta1)
-  jekyll-minifier!
+  jekyll-minifier
   jekyll-paginate-v2
   jekyll_elm
   jekyll_example_embed
@@ -104,4 +98,4 @@ DEPENDENCIES
   redcarpet
 
 BUNDLED WITH
-   1.15.1
+   1.16.0.pre.2
