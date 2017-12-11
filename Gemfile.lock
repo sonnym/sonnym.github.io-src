@@ -13,7 +13,7 @@ GEM
     ffi (1.9.18)
     forwardable-extended (2.6.0)
     htmlcompressor (0.3.1)
-    jekyll (3.6.0.pre.beta1)
+    jekyll (3.6.2)
       addressable (~> 2.4)
       colorator (~> 1.0)
       jekyll-sass-converter (~> 1.0)
@@ -34,10 +34,10 @@ GEM
       octicons (~> 3.0)
     jekyll-paginate-v2 (1.8.1)
       jekyll (~> 3.0)
-    jekyll-sass-converter (1.5.0)
+    jekyll-sass-converter (1.5.1)
       sass (~> 3.4)
-    jekyll-watch (1.5.0)
-      listen (~> 3.0, < 3.1)
+    jekyll-watch (1.5.1)
+      listen (~> 3.0)
     jekyll_elm (0.18.0)
     jekyll_example_embed (0.1.0)
       jekyll (~> 3)
@@ -45,11 +45,12 @@ GEM
     jekyll_fancy_link (0.0.5)
       jekyll (~> 3)
       jekyll-octicons (~> 3)
-    kramdown (1.14.0)
+    kramdown (1.16.2)
     liquid (4.0.0)
-    listen (3.0.8)
+    listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
+      ruby_dep (~> 1.2)
     mercenary (0.3.6)
     method_source (0.8.2)
     mini_portile2 (2.2.0)
@@ -58,13 +59,13 @@ GEM
       mini_portile2 (~> 2.2.0)
     octicons (3.0.1)
       nokogiri (>= 1.6.3.1)
-    pathutil (0.14.0)
+    pathutil (0.16.1)
       forwardable-extended (~> 2.6)
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    public_suffix (3.0.0)
+    public_suffix (3.0.1)
     pygments.rb (1.1.2)
       multi_json (>= 1.0.0)
     rb-fsevent (0.10.2)
@@ -72,8 +73,9 @@ GEM
       ffi (>= 0.5.0, < 2)
     redcarpet (3.4.0)
     rouge (2.2.1)
+    ruby_dep (1.5.0)
     safe_yaml (1.0.4)
-    sass (3.5.1)
+    sass (3.5.3)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -87,7 +89,7 @@ PLATFORMS
 
 DEPENDENCIES
   classifier-reborn
-  jekyll (= 3.6.0.pre.beta1)
+  jekyll
   jekyll-minifier
   jekyll-paginate-v2
   jekyll_elm
@@ -98,4 +100,4 @@ DEPENDENCIES
   redcarpet
 
 BUNDLED WITH
-   1.16.0.pre.2
+   1.16.0
