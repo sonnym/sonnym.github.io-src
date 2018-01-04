@@ -258,7 +258,7 @@ Bella will not.
 NoMethodError: protected method `reaction' called for #<Puppy:0x00005581ee417790>
 {% endhighlight %}
 
-## Refinement or Asymmetry
+## Asymmetry or Refinement
 
 We now have the means of exposing methods between two collaborating objects that
 share an interface, in this case, the `#reaction` method.  Let us imagine a
