@@ -667,8 +667,8 @@ Public.print
 
 {% highlight shell %}
 Traceback (most recent call last):
-        2: from foo.rb:29:in `<main>'
-        1: from foo.rb:25:in `print'
+        2: from protection.rb:29:in `<main>'
+        1: from protection.rb:25:in `print'
 protection.rb:25:in `public_send': protected method `print' called for Protected:Class (NoMethodError)
 {% endhighlight %}
 
