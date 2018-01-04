@@ -677,7 +677,7 @@ The `Protected::print` method, moreover, is list as protected, not public, from
 within the class using the refinement!  As a consequence of this final result, I
 cannot recommend using refinements for modifying method visibility when there is
 any intention to use dynamic dispatch or rely upon reflection.  Having
-encountered this first hand, it is worth mentioning that this is, at least
+encountered this first hand, it is worth pointing out that this is, at least
 indirectly, mentioned in the
 {% fancylink %}
   https://ruby-doc.org/core-2.5.0/doc/syntax/refinements_rdoc.html#label-Indirect+Method+Calls
