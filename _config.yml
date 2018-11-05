@@ -20,13 +20,14 @@ exclude: [
   "yarn.lock",
   "node_modules",
   "elm*",
-  "_examples/elm/0.14/*",
+  "_examples/elm/0.1*",
   '*.xcf'
 ]
 
 keep_files: [
   ".git",
-  "examples/elm/0.14/*",
+  "examples/elm/0.14",
+  "examples/elm/0.15",
   "examples/elm/barebones_architecture"
 ]
 
