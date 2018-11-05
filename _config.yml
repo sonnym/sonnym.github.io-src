@@ -6,6 +6,8 @@ permalink: pretty
 title: effluence
 url: https://sonnym.github.io/
 
+timezone: 'America/New_York'
+
 pagination:
   enabled: true
   per_page: 5
