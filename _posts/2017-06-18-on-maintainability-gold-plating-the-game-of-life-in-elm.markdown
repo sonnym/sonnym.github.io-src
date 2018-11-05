@@ -702,7 +702,7 @@ index 3ff7ae6..8689a89 100644
 
 At long last, behold the full example before we discuss it in more detail:
 
-{% example_embed elm/game_of_life_gold_plated.elm %}
+{% example_embed elm/0.15/game_of_life_gold_plated.elm %}
 
 This is, unfortunately, somewhat of a mess—not for any fault of Elm.  The main
 problem is having kept everything in a single file in an attempt to make the

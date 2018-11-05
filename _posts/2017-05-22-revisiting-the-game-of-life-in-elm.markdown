@@ -59,7 +59,7 @@ As we began in the original article, so we shall here: we simply want to draw
 a static grid on the screen.  This will introduce us to a number of core
 aspects of the language, without, hopefully, being overwhelming.
 
-{% example_embed elm/static_grid.elm %}
+{% example_embed elm/0.15/static_grid.elm %}
 
 Breaking this down, let us being with the declaration of the `main` function.
 This is the function that is primarily responsible for producing the output we
@@ -117,7 +117,7 @@ http://package.elm-lang.org/packages/elm-lang/core/5.1.1/Random
 {% endfancylink %}
 work in Elm, we must make use of commands.  The resultant code follows:
 
-{% example_embed elm/random_grid.elm %}
+{% example_embed elm/0.15/random_grid.elm %}
 
 To expand upon the need for the full-fledged `Html.program` in this example, it
 is necessary to understand the interplay between the `init` and `update`
@@ -154,7 +154,7 @@ of time cares not about the current state of our simulation, and just emits a
 new `Tick` message every second.  This is, in fact, perfectly legible from the
 code itself, so I will let it speak for itself.
 
-{% example_embed elm/game_of_life.elm %}
+{% example_embed elm/0.15/game_of_life.elm %}
 
 ## Resolution
 
