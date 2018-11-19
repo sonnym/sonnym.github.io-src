@@ -27,8 +27,7 @@ exclude: [
 keep_files: [
   ".git",
   "examples/elm/0.14",
-  "examples/elm/0.15",
-  "examples/elm/barebones_architecture"
+  "examples/elm/0.15"
 ]
 
 lsi: true
