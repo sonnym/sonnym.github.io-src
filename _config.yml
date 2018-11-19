@@ -39,6 +39,8 @@ keep_files: [
 
 lsi: true
 
+livereload: true
+
 plugins:
   - jekyll-paginate-v2
   - jekyll-minifier
