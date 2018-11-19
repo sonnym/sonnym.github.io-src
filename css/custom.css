@@ -33,3 +33,7 @@ figure.highlight pre {
 .clearfix {
   clear: both
 }
+
+.example-embed {
+  margin-bottom: 25px;
+}
