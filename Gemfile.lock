@@ -52,7 +52,7 @@ GEM
     jekyll_example_embed (0.2.0)
       jekyll (~> 3)
       jekyll-octicons (~> 3)
-    jekyll_fancy_link (0.0.5)
+    jekyll_fancy_link (0.0.6)
       jekyll (~> 3)
       jekyll-octicons (~> 3)
     kramdown (1.17.0)
