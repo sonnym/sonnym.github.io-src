@@ -16,14 +16,18 @@ pagination:
 exclude: [
   "Gemfile",
   "Gemfile.lock",
+
   "package.json",
   "yarn.lock",
   "node_modules",
+
   "elm.json",
   "elm-stuff",
   "elm-stuff/0.19.0/Main.elmi",
   "elm-stuff/0.19.0/Main.elmo",
+
   "_examples/elm/0.1*",
+
   '*.xcf'
 ]
 
