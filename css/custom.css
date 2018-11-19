@@ -37,3 +37,8 @@ figure.highlight pre {
 .example-embed {
   margin-bottom: 25px;
 }
+
+.fancylink svg {
+  width: 8px;
+  height: 10px;
+}
