@@ -40,7 +40,6 @@ keep_files: [
 lsi: true
 
 livereload: true
-incremental: true
 
 plugins:
   - jekyll-paginate-v2
