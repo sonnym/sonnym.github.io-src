@@ -52,7 +52,7 @@ signals can be combined and manipulated in various ways to achieve vastly
 complex results, clearly and concisely. It is this expressive power of Elm
 that I find especially interesting. The
 {% fancylink %}
-http://elm-lang.org/learn/What-is-FRP.elm
+https://elm-lang.org/docs/advanced-topics#functional-reactive-programming
 overview of FRP
 {% endfancylink %}
 on the Elm site is excellent resource for these core concepts.
