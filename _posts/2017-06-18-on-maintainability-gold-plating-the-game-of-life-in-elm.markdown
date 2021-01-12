@@ -29,7 +29,7 @@ reflective of maintaining larger applications in Elm.  Throughout the course of
 this article, we will consider successive diffs, starting from the original
 implementation, while moving toward the final version.
 
-##
+<!--more-->
 
 If you would like to see the full source code during any step of the process,
 please refer to this

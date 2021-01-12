@@ -42,7 +42,7 @@ attempt to limit the use of our newfound powers for good.  Let us begin by
 looking at the three levels of visibility available and how they are used via a
 concrete, storybook example.
 
-##
+<!--more-->
 
 ## Visibility or Protection
 

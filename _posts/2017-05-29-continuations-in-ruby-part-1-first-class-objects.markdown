@@ -47,7 +47,7 @@ no circumstances whatsoever, should these curios be used in anything with any
 degree of seriousness.  Why, then, should should we even bother?  Sometimes,
 the simple fact that we should not is enough to make it worthwhile.
 
-##
+<!--more-->
 
 ## The Basics
 

@@ -41,7 +41,7 @@ For anyone more interested in the result than the journey, be warned that this
 attempt will not be successful, but some interesting results will be found
 along the road to ultimate failure.
 
-##
+<!--more-->
 
 ## A Simple Hack
 

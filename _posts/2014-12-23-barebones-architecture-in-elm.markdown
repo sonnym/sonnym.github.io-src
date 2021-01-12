@@ -51,7 +51,7 @@ source
 which also incorporates the separation of components as outlined in the original
 article.
 
-##
+<!--more-->
 
 The only problem with these examples, and the theory behind them, is that they
 are too fleshed out, too complete. It is difficult to extract the core concepts

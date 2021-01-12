@@ -48,7 +48,7 @@ plugins:
   - jekyll_elm
   - jekyll_fancy_link
 
-excerpt_separator: "\n\n##\n\n"
+excerpt_separator: <!--more-->
 
 collections:
   examples:
