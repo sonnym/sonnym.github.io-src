@@ -10,11 +10,6 @@ tags:
   - specification
 ---
 
-<!--
-Let's be Mainstream! https://www.youtube.com/watch?v=oYk8CKH7OhE
-What is Success? https://www.youtube.com/watch?v=uGlzRt-FYto
--->
-
 ## New Beginnings
 
 Since I originally learned about and tried Elm in 2013, a lot about the language
