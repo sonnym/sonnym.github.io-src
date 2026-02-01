@@ -5,7 +5,7 @@ permalink: pretty
 title: effluence
 url: https://sonnym.com
 
-timezone: 'America/New_York'
+timezone: 'America/Chicago'
 
 pagination:
   enabled: true
