@@ -13,12 +13,8 @@ pagination:
   sort_reverse: true
 
 exclude: [
-  "Gemfile",
-  "Gemfile.lock",
-
   "package.json",
   "yarn.lock",
-  "node_modules",
 
   "elm.json",
   "elm-stuff",
