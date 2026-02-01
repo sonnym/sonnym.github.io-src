@@ -44,9 +44,6 @@ livereload: true
 plugins:
   - jekyll-paginate-v2
   - jekyll-minifier
-  - jekyll_example_embed
-  - jekyll_elm
-  - jekyll_fancy_link
 
 excerpt_separator: <!--more-->
 
