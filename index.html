@@ -1,41 +1,44 @@
 ---
 layout: default
-title: home
-
-pagination:
-  enabled: true
 ---
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
-
-    {{ post.excerpt }}
-
-    <a href="{{ post.url }}">Continue reading</a>
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-eyebrow">Austin, TX &nbsp;·&nbsp; Open to new opportunities</div>
+    <h1 class="hero-name">Sonny Michaud</h1>
+    <p class="hero-title">Engineering Leader</p>
+    <div class="hero-rule"></div>
+    <p class="hero-tagline">
+      Building the platforms and teams<br>that scale what matters.
+    </p>
+    <div class="hero-ctas">
+      <!--
+      <a href="#experience" class="btn btn-primary">View my work</a>
+      -->
+      <a href="#contact" class="btn btn-secondary">Get in touch</a>
+    </div>
   </div>
-  {% endfor %}
-</div>
+</section>
 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="/page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="/">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="/page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Get in touch</span>
+      <h2 class="section-title">Let's talk.</h2>
+      <div class="section-divider" style="margin: 1rem auto 0;"></div>
+    </div>
+    <p class="contact-text reveal reveal-delay-1">
+      "I'm always happy to discuss interesting problems — whether about a specific role, an engineering challenge, or just a good conversation about team culture and platform scale."
+    </p>
+    <div class="reveal reveal-delay-2">
+      <a href="mailto:michaud.sonny@gmail.com" class="btn btn-primary">michaud.sonny@gmail.com</a>
+    </div>
+    <div class="contact-links reveal reveal-delay-3">
+      <a href="https://linkedin.com/in/sonnymichaud" class="contact-link" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/sonnym" class="contact-link" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://calendly.com/sonnymichaud/introduction-call" class="contact-link" target="_blank" rel="noopener">Schedule a call</a>
+    </div>
+  </div>
+</section>

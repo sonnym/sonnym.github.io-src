@@ -13,9 +13,7 @@ module Jekyll
       '.html'
     end
 
-    def convert(content)
-      ElmCompiler.new(content).process!
-    end
+    def convert(_content); end
   end
 end
 

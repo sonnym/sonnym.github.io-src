@@ -1,0 +1,17 @@
+---
+---
+@use "syntax";
+@use "poole";
+
+.example-embed {
+  margin-bottom: 25px;
+}
+
+.fancylink {
+  white-space: nowrap;
+}
+
+.fancylink svg {
+  width: 8px;
+  height: 10px;
+}
