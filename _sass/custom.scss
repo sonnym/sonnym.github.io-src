@@ -68,7 +68,6 @@ nav.scrolled { border-bottom-color: var(--border); }
 
 /* --- HERO --- */
 .hero {
-  min-height: calc(100vh - 64px);
   display: flex; align-items: center;
   padding: 5rem 2rem 6rem;
   position: relative; overflow: hidden;
