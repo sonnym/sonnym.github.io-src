@@ -15,3 +15,22 @@
   width: 8px;
   height: 10px;
 }
+
+.archive {
+  .post {
+    margin-bottom: 0.4em;
+  }
+
+  .post-title {
+    font-size: 1.5rem;
+  }
+
+  .date {
+    font-size: 80%;
+    opacity: 0.8;
+  }
+
+  section {
+    padding: .5rem 0;
+  }
+}

@@ -7,11 +7,6 @@ url: https://sonnym.com
 
 timezone: 'America/Chicago'
 
-pagination:
-  enabled: true
-  per_page: 5
-  sort_reverse: true
-
 exclude: [
   "package.json",
   "yarn.lock",
