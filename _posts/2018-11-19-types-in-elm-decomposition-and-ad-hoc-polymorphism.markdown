@@ -30,8 +30,6 @@ types to make our programs more maintainable.
 before we move forward with the specifics, I would like to take a detour
 through my history with Elm as a way to frame the present discussion.
 
-<!--more-->
-
 ## Experience Thus Far
 
 My first foray into

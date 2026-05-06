@@ -23,8 +23,6 @@ accumulation of results. This leads to better modularity, as the parent
 controller is isolated from the implementation of nested controllers, while the
 latter are able to be used modularly in more contexts.
 
-<!--more-->
-
 ## A Simple Example
 
 {% fancylink %}

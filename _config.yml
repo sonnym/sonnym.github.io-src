@@ -35,8 +35,6 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-minifier
 
-excerpt_separator: <!--more-->
-
 collections:
   examples:
     output: true

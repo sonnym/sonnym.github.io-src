@@ -36,8 +36,6 @@ Now, let me present to you the problem through which we will frame this
 discussion:  given a number of student records, when displaying a single
 student, also display the quintile into which their grade falls.
 
-<!--more-->
-
 ## Calculating Quantiles in PostgreSQL
 
 Let us begin by looking at the structure of our `students` table.  The

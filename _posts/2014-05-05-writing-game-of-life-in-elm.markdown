@@ -38,8 +38,6 @@ from mloc.js 2013, where he presented an overview of Elm and the compelling exam
 of how one would write a simple side-scroller in an extremely straight forward
 fashion as a consequence of the core concept in Elm: signals.
 
-<!--more-->
-
 Elm is a
 {% fancylink %}
 https://en.wikipedia.org/wiki/Functional_reactive_programming

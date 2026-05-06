@@ -38,8 +38,6 @@ promotes declarative code
 over imperative. Without further ado, let us look at the current situation and
 how we can improve our directives.
 
-<!--more-->
-
 ## Motivation and Shortcomings
 
 The original motivation for this method arose when working with

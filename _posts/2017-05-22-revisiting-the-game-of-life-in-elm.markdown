@@ -24,8 +24,6 @@ in favor of subscription-based concurrency.  Today, we will go through the same
 exercise of writing the game of life, as a means of exploring the basics of a
 simple modern Elm program.
 
-<!--more-->
-
 If you have worked with Elm in the past, but several versions in the past, some
 history may help frame some of the changes.  (N.B. While I was actively
 following the discussions leading up to the release of version 0.15, I was
