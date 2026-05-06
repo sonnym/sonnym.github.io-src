@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Revisiting the Game of Life in Elm
+description: A return to Conway's Game of Life in Elm, tracing how the language's shift from signals to commands and subscriptions changed application structure.
 date: 2017-05-22
 tags:
   - elm

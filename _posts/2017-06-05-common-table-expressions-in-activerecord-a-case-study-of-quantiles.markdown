@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Common Table Expressions in ActiveRecord: A Case Study of Quantiles'
+description: An exploration of PostgreSQL common table expressions for quantile calculation, from raw SQL through ActiveRecord integration to an AREL abstraction.
 date: 2017-06-05
 tags:
   - ruby

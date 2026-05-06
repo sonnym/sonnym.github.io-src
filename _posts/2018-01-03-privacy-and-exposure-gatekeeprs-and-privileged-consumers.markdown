@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Privacy and Exposure, Gatekeepers and Privileged Consumers
+description: Using Ruby's singleton classes and refinements to build controlled access patterns between objects, applied to a practical mediator layer for ActiveRecord.
 date: 2018-01-03
 tags:
   - ruby

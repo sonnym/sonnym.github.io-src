@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Writing Game of Life in Elm
+description: An implementation of Conway's Game of Life in Elm, introducing signals and functional reactive programming through a sequence of progressively complete examples.
 date: 2014-05-05
 tags:
   - elm

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Barebones Architecture in Elm
+description: A reduction of Elm application architecture to its essential components, using a simple example to expose the underlying pattern clearly.
 date: 2014-12-23
 tags:
   - elm

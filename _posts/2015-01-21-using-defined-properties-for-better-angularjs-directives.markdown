@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Using Defined Properties for Better AngularJS Directives
+description: Applying JavaScript's Object.defineProperty to AngularJS directives, hiding business logic in custom getters and setters to reduce controller boilerplate.
 date: 2015-01-21
 tags:
   - javascript

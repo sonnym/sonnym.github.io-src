@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Hooks in AngularJS Controllers
+description: A practical hook mechanism for passing data from nested AngularJS controllers back to a parent, with guidance on when to use it over events or services.
 date: 2014-02-05
 tags:
   - angularjs

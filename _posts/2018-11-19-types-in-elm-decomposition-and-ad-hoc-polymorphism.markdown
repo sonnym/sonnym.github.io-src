@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Types in Elm: Decomposition and Ad Hoc Polymorphism"
+description: 'Two Elm type composition techniques: nesting union types to factor the update function, and approximating ad hoc polymorphism without type classes.'
 date: 2018-11-19
 tags:
   - elm

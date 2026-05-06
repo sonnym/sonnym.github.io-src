@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Lazy Ruby
+description: An exploration of Ruby's lazy enumerator for building infinite sequences, demonstrated through Fibonacci with a memoization layer to offset the cost of naive recursion.
 date: 2014-04-05
 tags:
   - ruby

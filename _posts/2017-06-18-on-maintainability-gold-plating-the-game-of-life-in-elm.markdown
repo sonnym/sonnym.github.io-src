@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'On Maintainability: Gold Plating the Game of Life in Elm'
+description: A study of Elm maintainability through deliberate gold plating, revealing how the language's architecture keeps new features additive.
 date: 2017-06-18
 tags:
   - elm
