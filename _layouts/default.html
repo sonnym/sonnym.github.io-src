@@ -25,6 +25,10 @@
       {% if page.title %} - {{ page.title }} {% endif %}
     </title>
 
+    {% if page.description %}
+      <meta name="description" content="{{ page.description }}">
+    {% endif %}
+
     <link rel="stylesheet" href="/assets/css/styles.css">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
