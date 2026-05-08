@@ -41,17 +41,35 @@
 
   <body>
     <!-- NAV -->
-    <nav id="nav">
+    <nav id="nav" role="navigation" aria-label="Main navigation">
       <div class="nav-inner">
         <a href="/#" class="nav-name">Sonny Michaud</a>
-        <ul class="nav-links">
+        <ul class="nav-links" role="list">
           <li><a href="/#experience">Experience</a></li>
           <li><a href="/#contact">Contact</a></li>
           <li><a href="/archive">Archive</a></li>
         </ul>
         <a href="mailto:michaud.sonny@gmail.com" class="nav-cta">Get in touch</a>
+        <button class="nav-hamburger" id="nav-hamburger"
+          aria-controls="mobile-menu" aria-expanded="false"
+          aria-label="Open navigation menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+      <div class="mobile-menu" id="mobile-menu" role="dialog"
+        aria-label="Navigation menu" aria-modal="false">
+        <ul class="mobile-links" role="list">
+          <li><a href="/#contact" class="mobile-link">Contact</a></li>
+          <li><a href="/#experience" class="mobile-link">Experience</a></li>
+          <li><a href="/archive/" class="mobile-link">Archive</a></li>
+        </ul>
+        <a href="mailto:michaud.sonny@gmail.com" class="mobile-cta">Get in touch</a>
       </div>
     </nav>
+
+    <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
 
     <main>
       {{ content }}
@@ -85,9 +103,56 @@
       }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
       document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    </script>
 
-    </body>
-    </html>
+      (function () {
+        const hamburger = document.getElementById('nav-hamburger');
+        const menu      = document.getElementById('mobile-menu');
+        const backdrop  = document.getElementById('nav-backdrop');
+        if (!hamburger || !menu || !backdrop) return;
+
+        const focusableSelectors = 'a[href], button:not([disabled])';
+
+        function openMenu() {
+          menu.classList.add('is-open');
+          hamburger.setAttribute('aria-expanded', 'true');
+          hamburger.setAttribute('aria-label', 'Close navigation menu');
+          backdrop.classList.add('visible');
+          const first = menu.querySelector(focusableSelectors);
+          if (first) first.focus();
+          document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+          hamburger.setAttribute('aria-expanded', 'false');
+          hamburger.setAttribute('aria-label', 'Open navigation menu');
+          backdrop.classList.remove('visible');
+          menu.classList.remove('is-open');
+          document.body.style.overflow = '';
+          hamburger.focus();
+        }
+
+        hamburger.addEventListener('click', () => {
+          hamburger.getAttribute('aria-expanded') === 'true' ? closeMenu() : openMenu();
+        });
+
+        backdrop.addEventListener('click', closeMenu);
+
+        menu.querySelectorAll('.mobile-link, .mobile-cta').forEach(link => {
+          link.addEventListener('click', closeMenu);
+        });
+
+        document.addEventListener('keydown', e => {
+          if (e.key === 'Escape' && hamburger.getAttribute('aria-expanded') === 'true') closeMenu();
+        });
+
+        menu.addEventListener('keydown', e => {
+          if (e.key !== 'Tab') return;
+          const focusable = Array.from(menu.querySelectorAll(focusableSelectors));
+          const first = focusable[0], last = focusable[focusable.length - 1];
+          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+        });
+      }());
+    </script>
   </body>
 </html>
