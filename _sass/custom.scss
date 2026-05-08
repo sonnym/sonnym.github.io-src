@@ -198,26 +198,6 @@ section { padding: 5.5rem 0; }
 .section-title { font-size: clamp(1.75rem, 4vw, 2.5rem); color: var(--accent); font-weight: 500; }
 .section-divider { width: 48px; height: 2.5px; background: var(--gold); border-radius: 2px; margin-top: 1rem; }
 
-/* --- ABOUT --- */
-.about { background: var(--bg-alt); }
-.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
-.about-text p { color: var(--text-muted); margin-bottom: 1.25rem; font-size: 1.02rem; line-height: 1.8; }
-.about-text p:last-child { margin-bottom: 0; }
-.about-heading { margin-bottom: 1.5rem; }
-.about-heading .section-title { line-height: 1.15; }
-.stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
-.stat-card {
-  background: var(--bg); border: 1px solid var(--border);
-  border-radius: var(--r-lg); padding: 1.5rem;
-  transition: box-shadow 0.2s, border-color 0.2s;
-}
-.stat-card:hover { border-color: var(--gold); box-shadow: 0 4px 16px rgba(193,127,36,0.1); }
-.stat-number {
-  font-family: var(--font-display); font-size: 2.5rem; font-weight: 600;
-  color: var(--accent); line-height: 1; margin-bottom: 0.4rem;
-}
-.stat-label { font-size: 0.8rem; color: var(--text-muted); line-height: 1.45; }
-
 /* ── Timeline ── */
 .experience { background: var(--bg-alt); padding: 5.5rem 0; }
 
