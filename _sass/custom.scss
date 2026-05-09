@@ -246,8 +246,107 @@ section { padding: 5.5rem 0; }
   height: 28px; width: auto; object-fit: contain;
 }
 
+/* --- Education section --- */
+.education {
+  background: var(--bg);
+  padding: 5.5rem 0;
+}
+
+.edu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+/* --- Card shell --- */
+.edu-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  overflow: hidden;              /* keeps band corners clipped */
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+/* --- Logo band --- */
+.edu-card-band {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 1.25rem 1.75rem;
+  border-bottom: 1px solid var(--border);
+  min-height: 88px;
+}
+
+/* Logo container */
+.edu-logo-wrap {
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  border-radius: var(--r);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Logo image */
+.edu-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Institution name and date */
+.edu-band-text {
+  flex: 1;
+  min-width: 0;
+}
+.edu-institution {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--accent);
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 0.3rem;
+}
+.edu-period {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--gold-text);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* --- Card body --- */
+.edu-card-body {
+  padding: 1.5rem 1.75rem;
+}
+
+.edu-items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.edu-items li {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  line-height: 1.55;
+}
+.edu-items li::before {
+  content: '·';
+  color: var(--gold);
+  flex-shrink: 0;
+  font-size: 1.2rem;
+  line-height: 1.05;
+}
+
 /* --- CONTACT --- */
-.contact { background: var(--bg); text-align: center; }
+.contact { background: var(--bg-alt); text-align: center; }
 .contact-text {
   font-family: var(--font-display); font-size: clamp(1.05rem, 2.5vw, 1.35rem);
   color: var(--text-muted); max-width: 540px; margin: 1.25rem auto 2.5rem;
