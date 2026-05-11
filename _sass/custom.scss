@@ -149,17 +149,6 @@ nav {
 .hero-content {
   position: relative; max-width: 800px; margin: 0 auto; text-align: center;
 }
-.hero-eyebrow {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  background: var(--accent-light); color: var(--accent);
-  font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em;
-  text-transform: uppercase; padding: 0.35rem 1.1rem;
-  border-radius: 100px; margin-bottom: 2.25rem;
-}
-.hero-eyebrow::before {
-  content: ''; width: 6px; height: 6px;
-  background: var(--gold); border-radius: 50%;
-}
 .hero-name {
   font-size: clamp(3rem, 9vw, 5.75rem);
   font-weight: 500; color: var(--accent);
